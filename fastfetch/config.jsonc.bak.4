@@ -1,0 +1,56 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "separator": " ⟫ ",
+    "key": {
+      "width": 18 
+    },
+    "color": {
+      "keys": "magenta"
+    }
+  },
+  "modules": [
+    "title",
+    {
+      "type": "separator",
+      "string": "—"
+    },
+    "os",
+    {
+      "type": "kernel",
+      "format": "{2}"
+    },
+    "uptime",
+    "separator",
+    "packages",
+    "shell",
+    "separator",
+    {
+      "type": "display",
+      "compactType": "original",
+      "key": "Display"
+    },
+    "wm",
+    "separator",
+    "terminal",
+    {
+      "type": "terminalfont",
+      "key": "Font",
+      "format": "{1}" // Чисто название шрифта без скобок
+    },
+    "separator",
+    "cpu",
+    {
+      "type": "gpu",
+      "format": "{2}" // Чисто название видяхи без [Discrete]
+    },
+    {
+        "type": "memory",
+        "format": "{1} / {2} ({3})" // Уберет лишние пробелы, если были
+    },
+    "swap",
+    "disk",
+    "break",
+    "colors"
+  ]
+}

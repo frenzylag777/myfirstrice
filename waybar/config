@@ -1,0 +1,34 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    //"custom/updates": {
+    //    "format": "[Check updates]",
+    //    "on-click": "alacritty -e bash update.sh"
+    //},
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+    "cpu": {
+    	"interval": 10,
+    	"format": " CPU: {usage}% | ",
+    	"max-length": 20
+    },
+    "memory": {
+    	"format": " Memory: {}%  ",
+    	"interval": 30,
+    	"max-length": 20
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "separator": " ⟫ ", // Заменил на стильную стрелочку
+    "key": {
+      "width": 18 // Это выровняет все ключи по одной линии
+    },
+    "color": {
+      "keys": "magenta" // Твой любимый цвет для ключей
+    }
+  },
+  "modules": [
+    "title",
+    {
+        "type": "separator",
+        "string": "—" // Можно делать сепараторы из тире, выглядит аккуратнее
+    },
+    "os",
+    "host",
+    {
+      "type": "kernel",
+      "format": "{2}" // Оставит только версию, без слова "Linux"
+    },
+    "uptime",
+    "separator",
+    "packages",
+    "shell",
+    "separator",
+    {
+      "type": "display",
+      "compactType": "original" // Уберет инфу про дюймы монитора
+    },
+    "de",
+    "wm",
+    "separator",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "separator",
+    "terminal",
+    "terminalfont",
+    "separator",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "break", // Пустая строка перед цветами
+    "colors"
+  ]
+}

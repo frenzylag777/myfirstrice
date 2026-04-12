@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "separator": " ⟫ ",
+    "key": {
+      "width": 20 
+    },
+    "color": {
+      "keys": "magenta"
+    }
+  },
+  "modules": [
+    "title",
+    {
+      "type": "separator",
+      "string": "—" // Эта линия под title обычно ок
+    },
+    "os",
+    {
+      "type": "kernel",
+      "format": "{2}"
+    },
+    "uptime",
+    // ВМЕСТО ОБЫЧНОГО SEPARATOR ПИШЕМ ЭТО:
+    {
+        "type": "custom",
+        "format": "------------------------------------------------------" 
+    },
+    "packages",
+    "shell",
+    {
+        "type": "custom",
+        "format": "------------------------------------------------------"
+    },
+    {
+      "type": "display",
+      "key": "Resolution"
+    },
+    "wm",
+    {
+        "type": "custom",
+        "format": "------------------------------------------------------"
+    },
+    "terminal",
+    {
+      "type": "terminalfont",
+      "key": "Font"
+    },
+    {
+        "type": "custom",
+        "format": "------------------------------------------------------"
+    },
+    "cpu",
+    {
+      "type": "gpu",
+      "format": "{2}" 
+    },
+    "memory",
+    "swap",
+    "disk",
+    "break",
+    "colors"
+  ]
+}
