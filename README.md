@@ -1,4 +1,4 @@
-# hyprdotfiles
+# my first rice
 my dotfiles
 
 os: Void Linux x86_64
