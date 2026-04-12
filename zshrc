@@ -120,3 +120,9 @@ alias srm='sudo xbps-remove -R'   # Удаление с зависимостям
 alias sq='xbps-query -Rs'         # Поиск пакетов
 
 alias purge='sudo xbps-remove -OO && sudo xbps-remove -o'
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/wine-staging/bin"
+
+alias wines="$HOME/wine-staging/bin/wine"
+alias wt='WINE=~/wine-staging/bin/wine winetricks'
