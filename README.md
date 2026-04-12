@@ -1,0 +1,2 @@
+# hyprdotfiles
+my dotfiles
