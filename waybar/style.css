@@ -1,9 +1,10 @@
 window#waybar {
-    background-color: #1A1B26;
+    background-color: rgba(26, 27, 38, 0);
     border-bottom: 3px solid transparent;
     color: #C0CAF5;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
+    border-radius: 15px;
 }
 
 #workspaces button.active {
@@ -14,4 +15,31 @@ window#waybar {
 #window {
     margin-left: 10px;
     color: #8EA2CD;
+}
+
+#cpu, #memory, #clock, #language, #workspaces, #network, #custom-btop {
+	background-color: #373B41;
+	padding: 0px 10px;
+	margin: 4px 4px;
+	border-radius: 15px;
+	color: #C0CAF5;
+}
+
+#cpu.normal { background-color: #918e00; }
+#cpu.warning { background-color: #c69c01; }
+
+#memory.warning { background-color: #c69c01; }
+
+#cpu.critical, #memory.critical {
+    background-color: #d60404;
+    animation-name: blink;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }

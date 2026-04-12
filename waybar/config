@@ -1,15 +1,24 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "modules-left": ["hyprland/workspaces"],
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "height": 42,
+    "modules-left": ["hyprland/workspaces", "custom/btop"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory"],
+    "modules-right": ["hyprland/language","network","cpu", "memory"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{name}"
+    },
+
+    "custom/btop": {
+    	"format": "󱕍 Btop",
+    	"on-click": "alacritty --class btop_float -e btop"
     },
 
     //"custom/updates": {
@@ -22,13 +31,28 @@
         "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
     },
     "cpu": {
-    	"interval": 10,
-    	"format": " CPU: {usage}% | ",
-    	"max-length": 20
+    	"interval": 3,
+    	"format": " {usage}%",
+    	"max-length": 20,
+    	"states": {
+    		"normal": 50,
+    	    "warning": 70,
+    	    "critical": 90
+    	}
     },
     "memory": {
-    	"format": " Memory: {}%  ",
-    	"interval": 30,
-    	"max-length": 20
+    	"format": " {}%",
+    	"interval": 5,
+    	"max-length": 20,
+    	"states": {
+    		"warning": 60,
+    		"critical": 90
+    	}
+    },
+    "network": {
+        "format-wifi": "{icon} {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰖪 Disconnected",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     }
 }
