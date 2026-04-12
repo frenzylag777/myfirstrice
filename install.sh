@@ -6,6 +6,8 @@ read -p "Type 'yes install' to proceed: " answer
 if [ "$answer" = "yes install" ]; then
     echo "Installation started..."
 
+    mkdir -p "$HOME/Pictures" && wget "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F885205.jpg" -O $HOME/Pictures/wall1.jpg
+
     rm -rf "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch"
 
     mkdir -p "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch"
