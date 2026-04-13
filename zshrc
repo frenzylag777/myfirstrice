@@ -106,23 +106,3 @@ source $ZSH/oh-my-zsh.sh
 alias ff="fastfetch"
 
 ff
-
-#alias i3cfg="micro ~/.config/i3/config"
-
-#alias polybarcfg="micro ~/.config/polybar/config.ini"
-
-alias hyprcfg="micro ~/.config/hypr/hyprland.conf"
-alias waybarcfg="micro ~/.config/waybar/config"
-
-alias sin='sudo xbps-install -S'  # Установка
-alias sup='sudo xbps-install -Su' # Обновление системы
-alias srm='sudo xbps-remove -R'   # Удаление с зависимостями
-alias sq='xbps-query -Rs'         # Поиск пакетов
-
-alias purge='sudo xbps-remove -OO && sudo xbps-remove -o'
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/wine-staging/bin"
-
-alias wines="$HOME/wine-staging/bin/wine"
-alias wt='WINE=~/wine-staging/bin/wine winetricks'
