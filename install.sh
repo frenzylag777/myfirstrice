@@ -6,17 +6,22 @@ read -p "Type 'yes install' to proceed: " answer
 if [ "$answer" = "yes install" ]; then
     echo "Installation started..."
 
-    mkdir -p "$HOME/Pictures" && wget "https://github.com/frenzylag777/myfirstrice/blob/25576b34a945e2cc2a0224a0ce1e48d6e7e38350/wall1.jpg" -O $HOME/Pictures/wall1.jpg
+    echo "Copying files..."
+    mkdir -p "$HOME/Pictures" && wget "https://github.com/frenzylag777/myfirstrice/blob/main/wall1.jpg?raw=true" -O $HOME/Pictures/wall1.jpg
 
-    rm -rf "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch"
+    rm -rf "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
 
-    mkdir -p "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch"
+    mkdir -p "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
 
     cp -r alacritty/* "$HOME/.config/alacritty/"
     cp -r hypr/* "$HOME/.config/hypr/"
     cp -r fastfetch/* "$HOME/.config/fastfetch/"
     cp -r waybar/* "$HOME/.config/waybar/"
+    cp -r fontconfig/* "$HOME/.config/fontconfig"
     cp zshrc "$HOME/.zshrc"
+
+    echo "Files copyed, updating font config..."
+    fc-cache -fv
 
     echo "Success! Dotfiles installed."
 else
