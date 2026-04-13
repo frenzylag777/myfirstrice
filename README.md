@@ -5,7 +5,7 @@ os: Void Linux x86_64
 
 shell: zsh
 
-wm: Hyprland 0.49.0 (Wayland)
+wm: Hyprland 0.54.3 (Wayland)
 
 bar: waybar
 
