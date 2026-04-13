@@ -5,7 +5,7 @@
     "margin-left": 10,
     "margin-right": 10,
     "margin-bottom": 0,
-    "height": 42,
+    "height": 44,
     "modules-left": ["hyprland/workspaces", "custom/btop"],
     "modules-center": ["clock"],
     "modules-right": ["hyprland/language","network","cpu", "memory"],

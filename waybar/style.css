@@ -7,7 +7,12 @@ window#waybar {
     border-radius: 15px;
 }
 
+#workspaces button {
+	color: #FFFFFF;
+}
+
 #workspaces button.active {
+	color: #C0CAF5;
     background-color: #373B41;
 	border-bottom: 3px solid #8EA2CD;
 }
