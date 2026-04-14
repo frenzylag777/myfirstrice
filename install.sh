@@ -9,11 +9,11 @@ if [ "$answer" = "yes install" ]; then
     echo "Copying files..."
     mkdir -p "$HOME/Pictures" && wget "https://github.com/frenzylag777/myfirstrice/blob/main/wall1.jpg?raw=true" -O $HOME/Pictures/wall1.jpg
 
-    rm -rf "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
+    rm -rf "$HOME/.config/kitty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
 
-    mkdir -p "$HOME/.config/alacritty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
+    mkdir -p "$HOME/.config/kitty" "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/fastfetch" "$HOME/.config/fontconfig"
 
-    cp -r alacritty/* "$HOME/.config/alacritty/"
+    cp -r kitty/* "$HOME/.config/kitty/"
     cp -r hypr/* "$HOME/.config/hypr/"
     cp -r fastfetch/* "$HOME/.config/fastfetch/"
     cp -r waybar/* "$HOME/.config/waybar/"
