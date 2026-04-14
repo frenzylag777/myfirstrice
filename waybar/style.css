@@ -8,13 +8,32 @@ window#waybar {
 }
 
 #workspaces button {
-	color: #FFFFFF;
+    color: #FFFFFF;
+    transition: all 0.1s ease;
+    animation: appear 0.1s ease forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    to {
+        opacity: 1;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
 }
 
 #workspaces button.active {
-	color: #C0CAF5;
+    color: #C0CAF5;
     background-color: #373B41;
-	border-bottom: 3px solid #8EA2CD;
+    border-bottom: 3px solid #8EA2CD;
+}
+
+#workspaces button label {
+    padding: 0;
 }
 
 #window {
@@ -22,17 +41,16 @@ window#waybar {
     color: #8EA2CD;
 }
 
-#cpu, #memory, #clock, #language, #workspaces, #network, #custom-btop {
-	background-color: #373B41;
-	padding: 0px 10px;
-	margin: 4px 4px;
-	border-radius: 15px;
-	color: #C0CAF5;
+#cpu, #memory, #clock, #language, #workspaces, #network, #custom-btop, #tray, #pulseaudio {
+    background-color: #373B41;
+    padding: 0px 10px;
+    margin: 4px 4px;
+    border-radius: 15px;
+    color: #C0CAF5;
 }
 
 #cpu.normal { background-color: #918e00; }
 #cpu.warning { background-color: #c69c01; }
-
 #memory.warning { background-color: #c69c01; }
 
 #cpu.critical, #memory.critical {

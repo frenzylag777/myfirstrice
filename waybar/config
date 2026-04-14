@@ -6,8 +6,8 @@
     "margin-right": 10,
     "margin-bottom": 0,
     "height": 44,
-    "modules-left": ["hyprland/workspaces", "custom/btop"],
-    "modules-center": ["clock"],
+    "modules-left": ["hyprland/workspaces", "tray"],
+    "modules-center": ["clock", "pulseaudio"],
     "modules-right": ["hyprland/language","network","cpu", "memory"],
 
     "hyprland/workspaces": {
@@ -15,17 +15,6 @@
         "all-outputs": true,
         "format": "{name}"
     },
-
-    "custom/btop": {
-    	"format": "󱕍 Btop",
-    	"on-click": "alacritty --class btop_float -e btop"
-    },
-
-    //"custom/updates": {
-    //    "format": "[Check updates]",
-    //    "on-click": "alacritty -e bash update.sh"
-    //},
-
     "clock": {
         "format": "{:%H:%M}",
         "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
@@ -54,5 +43,12 @@
         "format-ethernet": "󰈀 {ifname}",
         "format-disconnected": "󰖪 Disconnected",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+    "tray": {
+    	"spacing": 10	
+    },
+    "pulseaudio": {
+    	"on-click": "pavucontrol",
+    	"format": "󰕾 {volume}%"
     }
 }
